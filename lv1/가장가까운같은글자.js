@@ -14,7 +14,11 @@ function solution(s) {
 }
 
 
-// 다른 사람의 풀이.. spread연산자 주의!! 문자열을 배열로 확장할 수 있음. lastIndexOf도 있다는 것 잊지 않기~
+// 다른 사람의 풀이..
+// spread연산자 주의!! 
+// 문자열을 배열로 확장할 수 있음. 
+// lastIndexOf도 있다는 것 잊지 않기~ 
+// map의 매개변수는 .map((현재 요소, 인덱스, 현재 배열 그자체) => {})
 const solution = (s) =>
 [...s].map((char, i) => {
     const count = s.slice(0, i).lastIndexOf(char);
