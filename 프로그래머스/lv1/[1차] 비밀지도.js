@@ -68,3 +68,22 @@ function solution(n, arr1, arr2) {
 // (>>는 비트 시프트 연산자. 숫자를 2로 나누는 것과 동일한 효과.)
 // 코드에서 num % 2는 num & 1과 같고,
 // Math.floor(num / 2)는 num >> 1과 동일한 결과를 냅니다.
+
+
+// 아래는 비트연산자로 대체하여 수정
+
+function solution(n, arr1, arr2) {
+    let answer = [];
+    for (let i = 0; i < n; i++) {
+        let num1 = arr1[i];
+        let num2 = arr2[i];
+        let s = '';
+        for (let j = 0; j < n; j++) {
+            s = ((num1 & 1) | (num2 & 1)) ? '#' + s : ' ' + s; // 오른쪽 비트 비교
+            num1 >>= 1; // num1을 오른쪽으로 1비트 이동
+            num2 >>= 1; // num2를 오른쪽으로 1비트 이동
+        }
+        answer.push(s);
+    }
+    return answer;
+}
