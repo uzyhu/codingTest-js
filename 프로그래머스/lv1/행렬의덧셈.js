@@ -10,3 +10,4 @@ function solution(arr1, arr2) {
 }
 
 //2차원배열 값 대입 사용할 때 1차원은 초기화 해줘야함
+// https://chatgpt.com/c/678a5e8a-65f4-8006-a1a6-2dcbad940374
